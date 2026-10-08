@@ -1,0 +1,22 @@
+/* AI lab */
+.ai{background:var(--surface);border-block:1px solid var(--line)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px;overflow-x:auto}
+.tabs button{border:0;background:none;padding:10px 14px;color:var(--muted);font-weight:600;border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.howto{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:18px;font-size:.88rem;color:var(--muted)}
+.howto b{color:var(--ink)}
+.grp-h{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:18px 0 10px}
+.grp-h:first-child{margin-top:0}
+.prompts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:12px}
+.pcard{border:1px solid var(--line);border-radius:var(--r);background:var(--bg);padding:16px;display:flex;flex-direction:column;gap:8px}
+.pcard .when{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.pcard p{font-size:.9rem;color:var(--muted)}
+.pcard details summary{cursor:pointer;font-size:.85rem;font-weight:600}
+.pcard pre{white-space:pre-wrap;font-family:var(--f-mono);font-size:.76rem;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;margin:8px 0 0;max-height:240px;overflow:auto}
+.pcard textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--surface);color:var(--ink);font:inherit;font-size:.88rem;resize:vertical;min-height:40px}
+.pcard .row{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.btn{border:0;border-radius:10px;padding:10px 16px;background:var(--accent);color:var(--accent-ink);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-size:.95rem}
+.btn.ghost{background:var(--sunk);color:var(--ink)}
+.btn.sm{padding:7px 11px;font-size:.85rem;border-radius:8px}
+.btn[disabled]{opacity:.5;cursor:default}
+.ainote{font-size:.82rem;color:var(--muted);margin-top:16px;max-width:70ch}

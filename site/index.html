@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Climate Career Transition Kit</title>
+<meta name="description" content="A free, practical kit for moving into a climate or sustainability career: map your sectors, learn the space, build your network and apply, with 140+ checked resources and AI prompts. By Arjun Srihari.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://climate-career-kit.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Climate Career Transition Kit">
+<meta property="og:description" content="A free, practical kit for moving into a climate or sustainability career: map your sectors, learn the space, build your network and apply, with 140+ checked resources and AI prompts. By Arjun Srihari.">
+<meta property="og:url" content="https://climate-career-kit.netlify.app/">
+<meta property="og:image" content="https://climate-career-kit.netlify.app/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+html,body{margin:0}[hidden]{display:none!important}img{max-width:100%}
+
+/* Layout: a field guide. A route of four stages runs down the page, each stage pairs "how I'd do it" advice with hand-picked resources; an AI lab, a filterable library and a suggestion box sit at the end. */
+:root{
+  --bg:#F2F5F1; --surface:#FFFFFF; --sunk:#E8EEE9; --ink:#102A22; --muted:#4F6259; --line:#D3DDD6;
+  --accent:#0F6B57; --accent-ink:#FFFFFF; --accent-soft:#DCEDE6;
+  --sun:#B87708; --sun-soft:#FBEFD6;
+  --c-energy:#C27A00; --c-land:#3F7F2E; --c-water:#1F6FA8; --c-waste:#7A4FA3; --c-mobility:#B2453A; --c-buildings:#6B6A2A; --c-finance:#0F6B57;
+  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:10px; --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1714; --surface:#15211D; --sunk:#1A2924; --ink:#E4EEE9; --muted:#9DB2A8; --line:#293B34;
+  --accent:#5CC6A6; --accent-ink:#06231A; --accent-soft:#183A30;
+  --sun:#F0B44C; --sun-soft:#3A2D12;
+  --c-energy:#E9A93A; --c-land:#82BE6A; --c-water:#6CB0E3; --c-waste:#B994DD; --c-mobility:#E58A7E; --c-buildings:#C3C16E; --c-finance:#5CC6A6;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1714; --surface:#15211D; --sunk:#1A2924; --ink:#E4EEE9; --muted:#9DB2A8; --line:#293B34;
+  --accent:#5CC6A6; --accent-ink:#06231A; --accent-soft:#183A30;
+  --sun:#F0B44C; --sun-soft:#3A2D12;
+  --c-energy:#E9A93A; --c-land:#82BE6A; --c-water:#6CB0E3; --c-waste:#B994DD; --c-mobility:#E58A7E; --c-buildings:#C3C16E; --c-finance:#5CC6A6;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--f-display);line-height:1.12;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{color:var(--muted);max-width:62ch}
+button{font:inherit;cursor:pointer}
+.sr{position:absolute;left:-9999px}
+
+/* nav */
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:16px;padding-block:10px;overflow-x:auto;scrollbar-width:none}
+nav.top .brand{font-family:var(--f-display);font-weight:800;white-space:nowrap;text-decoration:none;color:var(--ink)}
+nav.top ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0}
+nav.top a.l{display:block;padding:6px 10px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:.9rem;white-space:nowrap}
+nav.top a.l:hover{background:var(--sunk);color:var(--ink)}
+nav.top a.l.ai{color:var(--accent);font-weight:600}
+
+/* hero */
+.hero{padding-block:56px 40px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800;letter-spacing:-.02em;max-width:14ch}
+.hero .lede{margin-top:18px;font-size:1.1rem}
+.hero .by{margin-top:14px;font-size:.92rem;color:var(--muted)}
+.route{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.route a{position:relative;display:block;padding:18px 18px 18px 0;text-decoration:none;color:var(--ink);border-top:3px solid var(--line)}
+.route a::before{content:"";position:absolute;top:-9px;left:0;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.route a:hover{border-top-color:var(--accent)}
+.route .n{font-family:var(--f-mono);font-size:.72rem;color:var(--accent);letter-spacing:.06em}
+.route .t{font-family:var(--f-display);font-weight:700;font-size:1.15rem;display:block;margin-top:2px}
+.route .d{display:block;color:var(--muted);font-size:.88rem;margin-top:4px;padding-right:8px}
+@media (max-width:760px){.route{grid-template-columns:1fr 1fr;row-gap:12px}}
+@media (max-width:420px){.route{grid-template-columns:1fr}}
+.now{margin-top:28px;display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--sun);border-radius:var(--r);padding:14px 16px}
+.now .eyebrow{color:var(--sun);white-space:nowrap;padding-top:2px}
+@media (max-width:520px){.now{flex-direction:column;gap:4px}}
+
+/* sections */
+section.stage{padding-block:56px;border-top:1px solid var(--line)}
+.stage-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:24px 48px;align-items:end;margin-bottom:28px}
+.stage-head .eyebrow span{color:var(--accent)}
+@media (max-width:820px){.stage-head{grid-template-columns:1fr}}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px 48px}
+@media (max-width:820px){.cols{grid-template-columns:1fr}}
+.advice{background:var(--accent-soft);border-radius:var(--r);padding:20px 22px;align-self:start}
+.advice .who{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.advice ul{margin:0;padding-left:1.1em;display:grid;gap:10px}
+.advice li::marker{color:var(--accent)}
+.advice .tmpl{margin-top:14px;background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:12px 14px;font-size:.9rem}
+.advice .note{margin-top:14px;border-left:3px solid var(--sun);padding:4px 0 4px 12px;font-size:.9rem}
+.picks h3{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.picks h3+.pick-list{margin-bottom:0}
+.picks .sub{margin-top:22px}
+.star{color:var(--sun)}
+.pick-list{display:grid;gap:10px}
+.res{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.res a.name{font-weight:600;color:var(--ink);text-decoration:none}
+.res a.name:hover{color:var(--accent);text-decoration:underline}
+.res a.name::after{content:" ↗";color:var(--muted);font-weight:400}
+.res .why{grid-column:1/-1;color:var(--muted);font-size:.92rem}
+.res .tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tag{font-family:var(--f-mono);font-size:.7rem;padding:2px 7px;border-radius:999px;background:var(--sunk);color:var(--muted);white-space:nowrap}
+.tag.pick{background:var(--sun-soft);color:var(--sun)}
+.tag.new{background:var(--accent-soft);color:var(--accent)}
+.tag.verify{border:1px dashed var(--sun);background:transparent;color:var(--sun)}
+.seeall{margin-top:12px;background:none;border:0;color:var(--accent);font-weight:600;padding:4px 0;text-align:left}
+.seeall:hover{text-decoration:underline}
+
+/* sector mapper */
+.mapper{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.mapper-top{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--line)}
+.crumbs{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px}
+.crumbs b{color:var(--ink);font-weight:500}
+.mcols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));min-height:330px}
+.mcol{border-right:1px solid var(--line);padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.mcol:last-child{border-right:0}
+.mcol .lvl{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:2px 6px 6px}
+.node{display:flex;align-items:center;gap:8px;text-align:left;width:100%;border:1px solid transparent;background:none;border-radius:8px;padding:8px 10px;color:var(--ink);font-size:.93rem}
+.node:hover{background:var(--sunk)}
+.node.on{background:var(--sunk);border-color:var(--line);font-weight:600}
+.node .dot{width:10px;height:10px;border-radius:3px;flex:none}
+.node .chev{margin-left:auto;color:var(--muted)}
+.mcol .empty{color:var(--muted);font-size:.88rem;padding:8px 10px}
+.roles{display:grid;gap:8px}
+.role{border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:.88rem}
+.role b{display:block;font-size:.92rem}
+.role span{color:var(--muted)}
+.addmap{margin-top:6px;background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:9px 12px;font-weight:600}
+.addmap[disabled]{opacity:.5;cursor:default}
+@media (max-width:860px){.mcols{grid-template-columns:1fr 1fr}.mcol:nth-child(2){border-right:0}.mcol:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (max-width:480px){.mcols{grid-template-columns:1fr}.mcol{border-right:0;border-bottom:1px solid var(--line)}}
+.mymap{margin-top:18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.mymap .chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 10px;font-size:.85rem;background:var(--bg)}
+.chip button{border:0;background:none;color:var(--muted);padding:0 4px;font-size:1rem;line-height:1}
+.meter{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);white-space:nowrap}
+.meter b{color:var(--accent);font-weight:500}
+@media (max-width:560px){.mymap{grid-template-columns:1fr}}
+
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:3px;margin-top:10px}
+.cal div{font-family:var(--f-mono);font-size:.66rem;text-align:center;padding:5px 0;border-radius:4px;background:var(--sunk);color:var(--muted)}
+.cal div.hot{background:var(--sun);color:var(--surface);font-weight:500}
+.cal div.warm{background:var(--sun-soft);color:var(--sun)}
+.calrow{margin-top:14px}
+.calrow .lbl{font-size:.88rem;font-weight:600}
+.calrow .sub{font-size:.82rem;color:var(--muted)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.kw span{font-family:var(--f-mono);font-size:.75rem;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+
+/* AI lab */
+.ai{background:var(--surface);border-block:1px solid var(--line)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px;overflow-x:auto}
+.tabs button{border:0;background:none;padding:10px 14px;color:var(--muted);font-weight:600;border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.howto{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:18px;font-size:.88rem;color:var(--muted)}
+.howto b{color:var(--ink)}
+.grp-h{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:18px 0 10px}
+.grp-h:first-child{margin-top:0}
+.prompts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:12px}
+.pcard{border:1px solid var(--line);border-radius:var(--r);background:var(--bg);padding:16px;display:flex;flex-direction:column;gap:8px}
+.pcard .when{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.pcard p{font-size:.9rem;color:var(--muted)}
+.pcard details summary{cursor:pointer;font-size:.85rem;font-weight:600}
+.pcard pre{white-space:pre-wrap;font-family:var(--f-mono);font-size:.76rem;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;margin:8px 0 0;max-height:240px;overflow:auto}
+.pcard textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--surface);color:var(--ink);font:inherit;font-size:.88rem;resize:vertical;min-height:40px}
+.pcard .row{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.btn{border:0;border-radius:10px;padding:10px 16px;background:var(--accent);color:var(--accent-ink);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-size:.95rem}
+.btn.ghost{background:var(--sunk);color:var(--ink)}
+.btn.sm{padding:7px 11px;font-size:.85rem;border-radius:8px}
+.btn[disabled]{opacity:.5;cursor:default}
+.ainote{font-size:.82rem;color:var(--muted);margin-top:16px;max-width:70ch}
+/* library */
+.filters{display:grid;gap:12px;margin-bottom:18px}
+.segs{display:flex;flex-wrap:wrap;gap:6px}
+.seg{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:.88rem}
+.seg[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.frow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.frow input[type=search],.frow select{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:8px 10px;font:inherit;font-size:.92rem}
+.frow input[type=search]{flex:1;min-width:min(100%,220px)}
+.frow label.ck{display:flex;gap:6px;align-items:center;font-size:.9rem;white-space:nowrap}
+.count{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.libgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:10px}
+
+/* suggest */
+.suggest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:24px 48px;align-items:start}
+@media (max-width:820px){.suggest{grid-template-columns:1fr}}
+form.sg{display:grid;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+form.sg label{font-size:.85rem;font-weight:600;display:grid;gap:4px}
+form.sg input,form.sg textarea,form.sg select{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:9px 10px;font:inherit;font-size:.93rem;font-weight:400}
+.okmsg{font-size:.9rem;color:var(--accent)}
+.errmsg{font-size:.9rem;color:var(--ink)}
+.inbox{margin-top:24px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--r);padding:16px 18px}
+.inbox ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.inbox li{border-top:1px solid var(--line);padding-top:10px;font-size:.92rem}
+.inbox li:first-child{border-top:0;padding-top:0}
+.inbox .meta{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+footer{padding-block:36px 56px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Sections"><div class="wrap">
+  <a class="brand" href="#top">Climate Career Kit</a>
+  <ul>
+    <li><a class="l" href="#map">1 Map</a></li>
+    <li><a class="l" href="#learn">2 Learn</a></li>
+    <li><a class="l" href="#connect">3 Connect</a></li>
+    <li><a class="l" href="#apply">4 Apply</a></li>
+    <li><a class="l ai" href="#ai">AI Lab</a></li>
+    <li><a class="l" href="#library">Library</a></li>
+  </ul>
+</div></nav>
+
+<header class="wrap hero" id="top">
+  
+  <p class="eyebrow">For students and career switchers moving into climate</p>
+  <h1>Find your corner of climate.</h1>
+  
+  <p class="lede">Climate and sustainability work is too broad to search in one go. This kit walks you through the method I use with the people I advise: narrow down to a handful of subsectors, go deep on them, build relationships inside them, then apply with a story that shows you know the space.</p>
+  <p class="by">Arjun Srihari · Career advisor and adjunct faculty, IE University · Co-founder of S2S Dynamics</p>
+
+  <div class="route" role="list">
+    <a href="#map" role="listitem"><span class="n">STEP 1</span><span class="t">Map your sectors</span><span class="d">Drill from broad sectors to 5–7 subsectors you'd actually work in.</span></a>
+    <a href="#learn" role="listitem"><span class="n">STEP 2</span><span class="t">Learn the space</span><span class="d">Courses and certifications that your target job descriptions ask for.</span></a>
+    <a href="#connect" role="listitem"><span class="n">STEP 3</span><span class="t">Build your network</span><span class="d">Communities, meetups, events and people who'll give you the inside view.</span></a>
+    <a href="#apply" role="listitem"><span class="n">STEP 4</span><span class="t">Track and apply</span><span class="d">Target companies, job boards, deadlines and warm introductions.</span></a>
+  </div>
+
+  <div class="now"><span class="eyebrow">Right now</span><p><b>October to December</b> is when most corporate graduate programmes and UN / development bank young professional programmes open for 2027 intakes. If either is on your list, start step 1 this week so you know which companies to watch.</p></div>
+</header>
+
+<main>
+<!-- STEP 1 -->
+<section class="stage" id="map"><div class="wrap">
+  <div class="stage-head">
+    <div><p class="eyebrow"><span>Step 1</span> · Weeks 1–3</p><h2>Map your sectors</h2></div>
+    <p class="lede">"Sustainability" isn't a sector, and neither is "renewables". Click down through the map below until you reach a part of the value chain where you can name actual companies. Save the ones that interest you. Aim for 5 to 7.</p>
+  </div>
+
+  <div class="mapper" aria-label="Sector mapper">
+    <div class="mapper-top">
+      <div class="crumbs" id="crumbs"><b>Start with a sector</b></div>
+      <a href="https://drawdown.org/solutions" target="_blank" rel="noopener" class="eyebrow" style="color:var(--accent)">Full map on Project Drawdown ↗</a>
+    </div>
+    <div class="mcols" id="mcols"></div>
+  </div>
+
+  <div class="mymap">
+    <div><div class="eyebrow" style="margin-bottom:6px">My shortlist</div><div class="chips" id="mychips"></div></div>
+    <div class="meter" id="meter"><b>0</b> of 5–7 subsectors</div>
+  </div>
+
+  <div class="cols" style="margin-top:28px">
+    <div class="advice">
+      <div class="who">How I'd use this</div>
+      <ul>
+        <li>Pick a starting hypothesis of 5 to 7 subsectors. You'll drop some within 6 to 8 weeks, and that's the point. Knowing what you don't want is progress.</li>
+        <li>For each subsector, list 15 to 20 companies in your target geography. Track them in Teal, Excel or Notion. Company databases and investor lists (below) help you find the ones that aren't household names.</li>
+        <li>Read their job descriptions. Note the skills and certifications you have and the ones you're missing. That gap is your plan for the year: projects, volunteering, courses, side work.</li>
+        <li>Company first, job title second. Many companies doing serious climate work never put "sustainability" in the job title.</li>
+      </ul>
+    </div>
+    <div class="picks">
+      <h3><span class="star">★</span> Start here</h3><div class="pick-list" data-picks="map"></div>
+      <h3 class="sub">Find companies in your subsector</h3><div class="pick-list" data-group="research"></div>
+      <button class="seeall" data-see="map"></button>
+    </div>
+  </div>
+</div></section>
+
+<!-- STEP 2 -->
+<section class="stage" id="learn"><div class="wrap">
+  <div class="stage-head">
+    <div><p class="eyebrow"><span>Step 2</span> · Ongoing</p><h2>Learn the space</h2></div>
+    <p class="lede">Learn enough to talk like an insider in your subsectors, and pick up the certifications your target job descriptions keep asking for. Let the job descriptions decide the certificates, not the other way round.</p>
+  </div>
+  <div class="cols">
+    <div class="advice">
+      <div class="who">How I'd use this</div>
+      <ul>
+        <li>Short, free courses are for learning the vocabulary, data sources and key players of a sector. You don't need the certificate.</li>
+        <li>Paid certifications only when 3 or more of your target job descriptions mention them. Reporting roles look for GRI and ESRS; finance roles look for ESG analyst credentials; almost everyone benefits from knowing Scope 1, 2 and 3 carbon accounting.</li>
+        <li>Turn what you learn into something you can show: a short analysis, a LinkedIn post, a project on a company you're targeting.</li>
+      </ul>
+      <p class="note"><b>CSRD has changed.</b> The EU's Omnibus package (finalised in 2026) limits mandatory CSRD reporting to companies with more than 1,000 employees and €450M turnover, from 2027. ESRS skills are still valued, but fewer companies must report, so check whether your targets are in scope before investing in a reporting certification.</p>
+    </div>
+    <div class="picks">
+      <h3><span class="star">★</span> Start with these</h3><div class="pick-list" data-picks="learn"></div>
+      <h3 class="sub">Certifications employers ask for</h3><div class="pick-list" data-group="cert"></div>
+      <button class="seeall" data-see="learn"></button>
+    </div>
+  </div>
+</div></section>
+
+<!-- STEP 3 -->
+<section class="stage" id="connect"><div class="wrap">
+  <div class="stage-head">
+    <div><p class="eyebrow"><span>Step 3</span> · Start in week 1, never stop</p><h2>Build your network</h2></div>
+    <p class="lede">Climate communities are where you hear the news early, learn who is hiring, and find jobs that never reach a job board. Use them to learn first. Applications come later.</p>
+  </div>
+  <div class="cols">
+    <div class="advice">
+      <div class="who">How I'd use this</div>
+      <ul>
+        <li>Join 2 or 3 communities, and inside them only 5 to 7 channels: one broad channel plus a few for your subsectors. More than that becomes noise.</li>
+        <li>Post an introduction with three parts: your background, the kind of role you're aiming for, and one specific ask.</li>
+        <li>When someone posts a job, message them before you apply. Say why you fit and ask for 15 minutes. That's how a cold application becomes a referral.</li>
+        <li>Give before you ask: share an article, an event, a quick bit of research. Then keep the relationship going.</li>
+        <li>At events and conferences, volunteering often gets you into the rooms where speakers and investors are.</li>
+        
+      </ul>
+      <div class="tmpl"><b>Intro post template</b><br>Hi all, I'm [name], based in [city] after [X years in Y]. I'm exploring [subsector 1] and [subsector 2], especially [value-chain role]. I'd love to talk to anyone working on [specific thing] in [geography]. Happy to share what I'm learning in return.</div>
+    </div>
+    <div class="picks">
+      <h3><span class="star">★</span> Communities and people</h3><div class="pick-list" data-picks="connect"></div>
+      <h3 class="sub">Events and conferences</h3><div class="pick-list" data-group="event"></div>
+      <button class="seeall" data-see="connect"></button>
+    </div>
+  </div>
+</div></section>
+
+<!-- STEP 4 -->
+<section class="stage" id="apply"><div class="wrap">
+  <div class="stage-head">
+    <div><p class="eyebrow"><span>Step 4</span> · When your list is ready</p><h2>Track and apply</h2></div>
+    <p class="lede">Use job boards to discover companies in your subsectors, and investor portfolio boards to find funded companies that are hiring. Then go through people, not just portals.</p>
+  </div>
+  <div class="cols">
+    <div class="advice">
+      <div class="who">How I'd use this</div>
+      <ul>
+        <li>Sort target companies into three tiers: dream companies, good fits for your current skills, and safe bets. Apply across all three.</li>
+        <li>Expect volume. In today's market, plan on around 100 serious applications. Easy Apply rarely works because roles fill or close within days.</li>
+        
+        <li>Keep one master CV and tailor keywords to each job description. Applicant tracking systems filter on them.</li>
+        <li>Practise interviews with companies lower on your list before your top targets.</li>
+        <li>Visa sponsorship is not always a dead end. Larger companies handle it more easily, and referrals move faster than cold applications.</li>
+      </ul>
+      <div class="calrow">
+        <div class="lbl">Recruiting calendar (typical)</div>
+        <div class="cal" aria-hidden="true"><div>J</div><div>F</div><div>M</div><div>A</div><div>M</div><div>J</div><div>J</div><div>A</div><div class="warm">S</div><div class="hot">O</div><div class="hot">N</div><div class="hot">D</div></div>
+        <div class="sub">Graduate programmes and UN / multilateral programmes: Oct–Dec. The EU Blue Book traineeship opens twice a year. Exact dates vary, so track each target's window.</div>
+      </div>
+      <div class="calrow">
+        <div class="lbl">Searching in Spain? Use Spanish keywords</div>
+        <div class="kw"><span>sostenibilidad</span><span>ESG</span><span>medio ambiente</span><span>economía circular</span><span>transición energética</span><span>cambio climático</span><span>RSC</span><span>huella de carbono</span></div>
+      </div>
+    </div>
+    <div class="picks">
+      <h3><span class="star">★</span> Job boards and investor portfolios</h3><div class="pick-list" data-picks="apply"></div>
+      <h3 class="sub">Spain and EU institutions</h3><div class="pick-list" data-group="spain"></div>
+      <button class="seeall" data-see="apply"></button>
+    </div>
+  </div>
+</div></section>
+
+<!-- AI LAB -->
+<section class="stage ai" id="ai"><div class="wrap">
+  <div class="stage-head">
+    <div><p class="eyebrow"><span>AI Lab</span> · Use at every step</p><h2>Think it through with AI</h2></div>
+    <p class="lede">Use AI as a sparring partner, not a ghostwriter. Each button below opens a new chat in your own Claude or ChatGPT account, already briefed on the method in this kit. It will ask you for your CV, job descriptions and anything else it needs. Always edit what comes back before you send it anywhere.</p>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="partners">Sparring partners</button>
+    <button role="tab" aria-selected="false" data-tab="prompts">Prompt library</button>
+    <button role="tab" aria-selected="false" data-tab="tools">AI job-search tools</button>
+  </div>
+
+  <div data-panel="partners">
+    <div class="howto"><span><b>Ongoing conversations.</b> Each partner coaches you over many messages.</span><span><b>Optional:</b> add a line of context first, like your target role or country.</span></div>
+    <div id="partners"></div>
+  </div>
+  <div data-panel="prompts" hidden>
+    <div class="howto"><span><b>One-off tasks.</b> Each prompt does one job and asks you for what it needs.</span></div>
+    <div class="prompts" id="prompts"></div>
+  </div>
+  <div data-panel="tools" hidden><div class="libgrid" id="aitools"></div></div>
+  <p class="ainote">These open in your own account, so you need to be signed in to Claude or ChatGPT (free accounts work). Nothing you type is sent to or stored by this site. If a chat opens empty, use "Copy" and paste it in. Don't share anything you wouldn't put in a CV.</p>
+</div></section>
+
+<!-- LIBRARY -->
+<section class="stage" id="library"><div class="wrap">
+  <div class="stage-head">
+    <div><p class="eyebrow">Everything in one place</p><h2>Resource library</h2></div>
+    <p class="lede">Every resource is tagged by step, type, region and cost. Starred items are the ones I recommend most often.</p>
+  </div>
+  <div class="filters">
+    <div class="segs" id="segs" role="group" aria-label="Filter by step"></div>
+    <div class="frow">
+      <input type="search" id="q" placeholder="Search, e.g. carbon, Madrid, finance" aria-label="Search resources">
+      <select id="ftype" aria-label="Type"></select>
+      <select id="freg" aria-label="Region"></select>
+      <label class="ck"><input type="checkbox" id="ffree"> Free only</label>
+      <label class="ck"><input type="checkbox" id="fpick"> Starred only</label>
+      <label class="ck"><input type="checkbox" id="fnew"> New</label>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+  <div class="libgrid" id="lib"></div>
+</div></section>
+
+<!-- SUGGEST -->
+<section class="stage" id="suggest"><div class="wrap">
+  <div class="suggest">
+    <div>
+      <p class="eyebrow">Keep it alive</p>
+      <h2 style="margin-top:6px">Found something useful?</h2>
+      <p class="lede" style="margin-top:14px">Suggest a resource you've used and found helpful. Suggestions come straight to me, I review every one, and new additions carry a "New" tag.</p>
+    </div>
+    <form class="sg" id="sg" name="suggestion" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="suggestion">
+      <input type="hidden" name="edition" value="open">
+      <p hidden><label>Leave this empty <input name="company"></label></p>
+      <label for="sg-name">Resource name<input id="sg-name" name="resource" required maxlength="120"></label>
+      <label for="sg-url">Link<input id="sg-url" name="link" type="url" placeholder="https://" required maxlength="400"></label>
+      <label for="sg-step">Which step does it help with?<select id="sg-step" name="step"><option>Map</option><option>Learn</option><option>Connect</option><option>Apply</option><option>AI tools</option></select></label>
+      <label for="sg-why">Why is it useful? (one line)<textarea id="sg-why" name="why" rows="2" maxlength="400"></textarea></label>
+      <label for="sg-who">Your name (optional, so I can credit you)<input id="sg-who" name="name" maxlength="80"></label>
+      <button class="btn" type="submit" id="sg-btn">Send suggestion</button>
+      <p class="okmsg" id="sgok" hidden role="status">Thanks. Your suggestion is on its way to me.</p>
+      <p class="errmsg" id="sgerr" hidden role="alert"></p>
+    </form>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Climate Career Transition Kit · Arjun Srihari · Updated October 2026</span>
+  <span>Links checked 8 October 2026. Items tagged "check" are new and still being confirmed.</span>
+</div></footer>
+
+<script>
+(function(){
+"use strict";
+const EDITION="open";
+/* ---------- resources ----------
+ s = step (map|learn|connect|apply|tools); t = type; r = region; f = free; p = starred
+ g = group shown under a step (research|cert|event|spain); nw = new; v = still to confirm; ed = only in one edition */
+const R0 = [
+ // MAP
+ {n:"Project Drawdown solutions",u:"https://drawdown.org/solutions",d:"The sector map I start everyone on. Browse solutions by sector, then drill into the ones that pull you in.",s:"map",t:"Guide",r:"Global",f:1,p:1,nw:1},
+ {n:"Sustainable Career Pathways",u:"https://sustainablecareerpathways.com/",d:"The most complete career site I've found: interviews, job resources, networks, education and a conference list.",s:"map",t:"Guide",r:"Global",f:1,p:1},
+ {n:"Climate People: climate sectors",u:"https://www.climatepeople.com/sectors",d:"A recruiter's plain-language overview of climate sectors and the roles inside them.",s:"map",t:"Guide",r:"Global",f:1,nw:1},
+ {n:"Your climate journey and climate action guide",u:"https://crowdsourcingsustainability.org/your-climate-journey-and-climate-action-guide/",d:"Seven keys, including crafting your climate story and finding your place in the movement.",s:"map",t:"Guide",r:"Global",f:1,p:1},
+ {n:"Work on Climate: get-a-job starter pack",u:"https://workonclimate.notion.site/Get-a-job-starter-pack-711758f85d4944b3b7f5c54f24f58e93",d:"Work on Climate's own step-by-step starter pack.",s:"map",t:"Guide",r:"Global",f:1,v:1},
+ {n:"Climate Action 101 (Airtable)",u:"https://airtable.com/shruVE87u8cNOBicH/tblHy9VF02ZgjyeCu/viwusbw8j7e6MhyaH",d:"Piotr Drozd's database of organisations, podcasts and newsletters. The website version is gone; this is the original.",s:"map",t:"Guide",r:"Global",f:1,v:1},
+ {n:"Saathe Studio climate career resources",u:"https://www.saathestudio.com/resources",d:"City guides (London, NYC, SF, DC, India) plus a hub on freelance and fractional climate work.",s:"map",t:"Guide",r:"Global",f:1},
+ {n:"So You Want to Work in Climate",u:"https://nicolekelner.notion.site/So-You-Want-to-Work-in-Climate-1e5f92ed0a978091960fc1645d09d469",d:"Nicole Kelner's long-running crowdsourced guide, now on Notion.",s:"map",t:"Guide",r:"Global",f:1},
+ {n:"So You Want to Work in Nature Tech",u:"https://docs.google.com/spreadsheets/d/1GoqhLe63G8u9gNy7iWwHz5d6Qg7xpcaHd1BR73UJ0yE/edit",d:"Spreadsheet of nature tech and regeneration companies.",s:"map",t:"Guide",r:"Global",f:1,v:1},
+ {n:"A Guide to Finding a Job in Climate Tech",u:"https://docs.google.com/document/d/1iOznMlJzh0iX6uwW3-0BxUu-vqhy2a4RLBPwTv0ZQRU/edit",d:"Community-written Google Doc on breaking into climate tech.",s:"map",t:"Guide",r:"Global",f:1,v:1},
+ {n:"Climate Resources for a Career Pivot",u:"https://lying-shelf-48c.notion.site/Climate-Resources-for-a-Career-Pivot-52a590d5e63a4912a97d9215beb6e46b",d:"A switcher's collected resources, on Notion.",s:"map",t:"Guide",r:"Global",f:1,v:1},
+ {n:"Want to work in climatetech? Start here",u:"https://www.canarymedia.com/articles/clean-energy/want-to-work-in-climatetech-heres-how-to-get-started",d:"Canary Media's 2022 primer. Good on climate recruiters and reverse job boards.",s:"map",t:"Article",r:"Global",f:1},
+ {n:"Want to Work on Climate? Start Here",u:"https://susanfsu.medium.com/want-to-work-on-climate-start-here-14afbf3ccd74",d:"Susan Su's widely shared starting guide.",s:"map",t:"Article",r:"Global",f:1},
+ {n:"The Climate Wiki: Jobs",u:"https://theclimatewiki.notion.site/theclimatewiki/Jobs-fa3e2f35e4e14458af31df165e9cd1d8",d:"Community wiki with job-search pages and links.",s:"map",t:"Guide",r:"Global",f:1,v:1},
+ {n:"Reconsidered resource library",u:"https://www.reconsidered.co/content",d:"Tools and resources for sustainable business professionals.",s:"map",t:"Guide",r:"Global",f:1},
+ {n:"Crunchbase",u:"https://www.crunchbase.com/",d:"Search companies by sector, location and funding stage. The free tier is enough for a long-list.",s:"map",t:"Research tool",r:"Global",f:1,g:"research",nw:1},
+ {n:"Dealroom: climate tech investors",u:"https://app.dealroom.co/lists/40819",d:"Investor list. Find who funds your subsector, then check their portfolios.",s:"map",t:"Research tool",r:"Global",f:1,g:"research"},
+ {n:"Climate Tech VCs: the global list",u:"https://www.toptierimpact.com/climate-tech-vcs",d:"Another investor list to work from: investor, then portfolio, then companies.",s:"map",t:"Research tool",r:"Global",f:1,g:"research"},
+ {n:"inClimate company directory",u:"https://www.inclimate.com/",d:"8,900+ verified climate companies, strong on Europe.",s:"map",t:"Research tool",r:"Europe",f:1,g:"research",p:1},
+ {n:"Forética",u:"https://foretica.org/",d:"Spain's corporate sustainability network. Its member list is a ready-made target list of Spanish companies that take sustainability seriously.",s:"map",t:"Research tool",r:"Spain",f:1,g:"research",nw:1},
+ // LEARN
+ {n:"Terra.do Learning for Action",u:"https://terra.do/",d:"My top pick for anyone new to climate. Use my referral link for 20% off: r.terra.do/referral/Arjun1921",s:"learn",t:"Course",r:"Global",f:0,p:1},
+ {n:"Drawdown Climate Solutions 101",u:"https://drawdown.org/climate-solutions-101",d:"Short free video course that pairs well with the sector map.",s:"learn",t:"Course",r:"Global",f:1,p:1},
+ {n:"Reconsidered Impact Upskilling Hub",u:"https://www.reconsidered.co/upskill",d:"100+ sustainability courses and programmes, filterable. Look here before paying for anything.",s:"learn",t:"Course",r:"Global",f:1,p:1},
+ {n:"GRI Academy",u:"https://www.globalreporting.org/academy",d:"GRI and ESRS Professional Certifications, plus courses on Scope 3, assurance and nature reporting. Available in English and Spanish.",s:"learn",t:"Certification",r:"Global",f:0,g:"cert",p:1,nw:1},
+ {n:"EFRAG ESRS Knowledge Hub",u:"https://knowledgehub.efrag.org/",d:"The official home of the EU reporting standards. Free starter access to explore ESRS and the simplified versions.",s:"learn",t:"Course",r:"Europe",f:1,g:"cert",nw:1},
+ {n:"CFA Institute Sustainable Investing Certificate",u:"https://www.cfainstitute.org/programs/esg-certification",d:"Formerly the Certificate in ESG Investing. Entry-level credential for finance-track roles.",s:"learn",t:"Certification",r:"Global",f:0,g:"cert",nw:1},
+ {n:"EFFAS Certified ESG Analyst (CESGA)",u:"https://effas.com/",d:"ESG analyst credential recognised by European finance employers.",s:"learn",t:"Certification",r:"Europe",f:0,g:"cert",nw:1},
+ {n:"GHG Protocol training",u:"https://ghgprotocol.org/",d:"Carbon accounting from the source. Scope 1, 2 and 3 appear in most reporting and consulting job descriptions.",s:"learn",t:"Certification",r:"Global",f:0,g:"cert",nw:1,v:1},
+ {n:"Kith Climate: Climate Work Residency",u:"https://kithclimate.com/",d:"Formerly Voiz Academy. Six weeks building real climate deliverables (carbon inventory, CSRD narrative) with AI tools. Paid, around $2,650.",s:"learn",t:"Course",r:"Global",f:0,nw:1},
+ {n:"Climate Change AI",u:"https://www.climatechange.ai/",d:"Courses and a summer school on AI for climate: geospatial, MRV, forecasting.",s:"learn",t:"Course",r:"Global",f:1,nw:1},
+ {n:"How to Get a Job in Climate (LinkedIn Learning)",u:"https://www.linkedin.com/learning/how-to-get-a-job-in-climate",d:"Short course by the Climate People recruiting team.",s:"learn",t:"Course",r:"Global",f:0,nw:1},
+ {n:"HeatSpring",u:"https://www.heatspring.com/",d:"200+ technical clean energy courses (solar, heat pumps, buildings), many free.",s:"learn",t:"Course",r:"Global",f:1,nw:1,v:1},
+ {n:"Zopeful: Intro to Climate",u:"https://zopeful.com/course/intro-to-climate",d:"Free 14-day email course, one short lesson a day.",s:"learn",t:"Course",r:"Global",f:1},
+ {n:"ClimatePartner Academy webinars",u:"https://www.climatepartner.com/en/events",d:"Free online sessions on corporate climate action.",s:"learn",t:"Course",r:"Europe",f:1},
+ {n:"AirMiners Boot Up",u:"https://bootup.airminers.org/",d:"Carbon removal bootcamp.",s:"learn",t:"Course",r:"Global",f:1},
+ {n:"MIT OpenCourseWare: Environment",u:"https://ocw.mit.edu/collections/environment/",d:"Free university-level courses.",s:"learn",t:"Course",r:"Global",f:1},
+ {n:"New Energy Academy",u:"https://newenergyacademy.org/programmes/",d:"Free energy transition programme series, including hydrogen geopolitics.",s:"learn",t:"Course",r:"Global",f:1},
+ {n:"Bristol: Sustainable Futures (FutureLearn)",u:"https://www.futurelearn.com/courses/sustainable-futures",d:"Free limited access, or paid for the certificate.",s:"learn",t:"Course",r:"Global",f:1},
+ {n:"Cambridge: Business Sustainability Management",u:"https://cisl-onlinecourses.getsmarter.com/presentations/lp/university-of-cambridge-business-sustainability-management-online-short-course/",d:"CISL's 8-week online short course.",s:"learn",t:"Course",r:"Global",f:0},
+ {n:"Oxford: Leading Sustainable Corporations",u:"https://oxford-onlineprogrammes.getsmarter.com/presentations/lp/oxford-leading-sustainable-corporations-programme/",d:"6-week online executive programme.",s:"learn",t:"Course",r:"Global",f:0},
+ {n:"Yale: Sustainable Finance and Investment",u:"https://online-shortcourses.som.yale.edu/presentations/lp/yale-som-executive-education-sustainable-finance-and-investment-online-program/",d:"6-week online course for the finance track.",s:"learn",t:"Course",r:"Global",f:0},
+ {n:"Stanford: Sustainability Strategies",u:"https://em-execed.stanford.edu/sustainability-strategies",d:"8-week online programme from Stanford GSB.",s:"learn",t:"Course",r:"Global",f:0},
+ {n:"Michigan SEAS: Sustainability Bootcamp",u:"https://seas.umich.edu/academics/executive-education/online-bootcamp-sustainability",d:"12-week online bootcamp, around $4,500.",s:"learn",t:"Course",r:"Global",f:0},
+ {n:"OnePointFive Academy",u:"https://www.opf.degree/academy",d:"Practical climate strategy training.",s:"learn",t:"Course",r:"Global",f:0},
+ {n:"Evolv Sustainability Careers Academy",u:"https://www.evolvconsultants.co.uk/sustainability-careers-academy",d:"UK-based career-change programme.",s:"learn",t:"Course",r:"Europe",f:0},
+ // CONNECT
+ {n:"Terra.do community",u:"https://www.terra.do/",d:"5,000+ members in 80+ countries, regular career events, a big job board. Free web app.",s:"connect",t:"Community",r:"Global",f:1,p:1},
+ {n:"Climate Coffee Madrid",u:"https://climatecoffee.notion.site/Climate-Coffee-Madrid-2067b4a9f2544c5f851ffc0e016abe3a",d:"Last Thursday of every month, in English, no booking. I'm usually there.",s:"connect",t:"Meetup",r:"Madrid",f:1,p:1},
+ {n:"Open Door Climate",u:"https://www.opendoorclimate.com/",d:"Fill in the career seeker form for 1:1 chats, or browse the directory. Come with a clear ask.",s:"connect",t:"Directory",r:"Global",f:1,p:1},
+ {n:"inClimate",u:"https://www.inclimate.com/",d:"Europe's climate network: 23,000+ members, a job board and a company directory. Community runs on WhatsApp.",s:"connect",t:"Community",r:"Europe",f:1,p:1},
+ {n:"Work on Climate",u:"https://workonclimate.org/",d:"Global community with Expert Office Hours (free mentoring from people in the field), events and volunteer roles.",s:"connect",t:"Community",r:"Global",f:1,p:1},
+ {n:"Climate Coffee in other cities",u:"https://climatecoffee.notion.site/311b40de953c45439059f200ea25dded",d:"Barcelona, London, Berlin, Paris, Milan, Amsterdam, Copenhagen and more.",s:"connect",t:"Meetup",r:"Europe",f:1},
+ {n:"Green Drinks Madrid",u:"https://greendrinks.org/madrid",d:"Irregular meetups, in Spanish.",s:"connect",t:"Meetup",r:"Madrid",f:1},
+ {n:"ClimateAction.tech",u:"https://climateaction.tech/",d:"Slack community for tech workers in climate. Join through the form on the site.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"Climate Changemakers",u:"https://www.climatechangemakers.org/",d:"Community with US and Europe chapters.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"My Climate Journey (MCJ)",u:"https://www.mcj.vc/",d:"Investor-led community, podcast and newsletter that tracks funding rounds.",s:"connect",t:"Community",r:"Global",f:0},
+ {n:"Crowdsourcing Sustainability",u:"https://crowdsourcingsustainability.org/",d:"Community and newsletter. Their climate-jobs issue is linked under newsletters.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"Climate Reality",u:"https://www.climaterealityproject.org/",d:"Global climate advocacy network.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"Climate Draft",u:"https://www.climatedraft.org/",d:"Reverse job board: build a profile and decarbonising companies come to you.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"AirMiners",u:"https://airminers.org/",d:"Carbon removal community.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"Work for Climate",u:"https://www.workforclimate.org/",d:"For people driving climate action inside their current employer. Free playbook.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"Creatives for Climate",u:"https://www.creativesforclimate.co/join",d:"For marketing, comms and creative roles.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"The Bloom",u:"https://readtobloom.com/",d:"Community for social impact professionals.",s:"connect",t:"Community",r:"Global",f:1},
+ {n:"inClimate members directory",u:"https://www.inclimate.com/members",d:"People and companies in the inClimate community.",s:"connect",t:"Directory",r:"Europe",f:1,v:1},
+ {n:"Climate Coffee attendee database",u:"https://climatecoffee.notion.site/Climate-Coffee-Madrid-2067b4a9f2544c5f851ffc0e016abe3a",d:"Investors, founders and professionals across 20+ European cities. Ask me for the password.",s:"connect",t:"Directory",r:"Europe",f:1,ed:"ie"},
+ {n:"IE alumni on LinkedIn",u:"https://www.linkedin.com/school/ie-university/people/",d:"Filter by company and city to find alumni at your target companies.",s:"connect",t:"Directory",r:"Global",f:1,ed:"ie"},
+ {n:"Sustainable Career Pathways: conference list",u:"https://sustainablecareerpathways.com/conferences",d:"Sustainability conferences by category, with typical months. US-heavy, with key European events.",s:"connect",t:"Event",r:"Global",f:1,g:"event",p:1,nw:1},
+ {n:"South Summit Madrid",u:"https://www.southsummit.io/",d:"June. Startup pitches by theme, including climate. Volunteer passes get you into the networking areas.",s:"connect",t:"Event",r:"Madrid",f:0,g:"event",nw:1},
+ {n:"EU Sustainable Energy Week",u:"https://sustainable-energy-week.ec.europa.eu/",d:"Brussels, usually June. The EU's main energy policy event, free to attend.",s:"connect",t:"Event",r:"Europe",f:1,g:"event",nw:1,v:1},
+ {n:"World Circular Economy Forum",u:"https://www.sitra.fi/en/projects/world-circular-economy-forum/",d:"Usually spring, location varies. The main global circular economy gathering.",s:"connect",t:"Event",r:"Europe",f:0,g:"event",nw:1,v:1},
+ {n:"PRI in Person",u:"https://www.unpri.org/",d:"October, location varies. For the responsible investment track.",s:"connect",t:"Event",r:"Global",f:0,g:"event",nw:1},
+ {n:"UN Climate Change Conference (COP)",u:"https://unfccc.int/",d:"November. Side events and pavilions are where much of the networking happens.",s:"connect",t:"Event",r:"Global",f:0,g:"event",nw:1},
+ {n:"CTVC newsletter",u:"https://www.ctvc.co/",d:"Weekly climate tech funding and news. Shows you who is raising money, and so who will hire.",s:"connect",t:"Newsletter",r:"Global",f:1,p:1},
+ {n:"Crowdsourcing Sustainability: finding a job in climate",u:"https://crowdsourcing-sustainability.kit.com/posts/resources-for-finding-a-job-in-climate",d:"Their newsletter issue on climate job resources, with links to every past issue.",s:"connect",t:"Newsletter",r:"Global",f:1},
+ {n:"Climate Swings",u:"https://climateswings.substack.com/",d:"Stories from people who moved into climate careers.",s:"connect",t:"Newsletter",r:"Global",f:1},
+ {n:"My Climate Journey podcast",u:"https://open.spotify.com/show/0H5VL0zvqrygm9JRE7Id2o",d:"Founder and investor interviews across climate tech.",s:"connect",t:"Podcast",r:"Global",f:1},
+ {n:"Outrage + Optimism",u:"https://open.spotify.com/show/5Rbif0NfMJDT2zVaadZBBq",d:"Climate policy and business.",s:"connect",t:"Podcast",r:"Global",f:1},
+ {n:"Zero by Bloomberg",u:"https://open.spotify.com/show/5rHwnJEjFRnivIdpWwnZyZ",d:"Weekly climate and energy news.",s:"connect",t:"Podcast",r:"Global",f:1},
+ {n:"The Drawdown Agenda",u:"https://open.spotify.com/show/5yXgOsUOgwZoBEB97U4J8Y",d:"Deep dives on climate solutions.",s:"connect",t:"Podcast",r:"Global",f:1},
+ {n:"Regenerative Skills",u:"https://open.spotify.com/show/08weC4gCki6odGaU3UM6oI",d:"Regenerative design and systems thinking.",s:"connect",t:"Podcast",r:"Global",f:1},
+ {n:"Stories for the Future",u:"https://open.spotify.com/show/7skUYV8BUVmhzjCnDM4tKx",d:"Includes a two-part episode with me.",s:"connect",t:"Podcast",r:"Global",f:1},
+ {n:"80,000 Hours podcast",u:"https://open.spotify.com/show/2WzJwXWBDnn4iZ7odKwDib",d:"Long-form interviews on high-impact careers.",s:"connect",t:"Podcast",r:"Global",f:1},
+ {n:"Red to Green Solutions",u:"https://redtogreen.solutions/",d:"In-depth audio courses on food sustainability.",s:"connect",t:"Podcast",r:"Global",f:1},
+ {n:"Climate People",u:"https://www.climatepeople.com/candidates",d:"Climate recruiter with candidate resources, case studies and a practical YouTube channel.",s:"connect",t:"Recruiter",r:"Global",f:1,p:1},
+ {n:"Climate People on YouTube",u:"https://www.youtube.com/@climatepeople9003/videos",d:"Job-search sessions, including one with Work on Climate and MCJ.",s:"connect",t:"Recruiter",r:"Global",f:1},
+ {n:"Acre",u:"https://acre.com/",d:"Sustainability and ESG recruiter with a strong European presence.",s:"connect",t:"Recruiter",r:"Europe",f:1,nw:1,v:1},
+ {n:"Saathe Studio",u:"https://www.saathestudio.com/",d:"Radhika Bhatt's climate career coaching.",s:"connect",t:"Recruiter",r:"Global",f:0},
+ {n:"Catchafire",u:"https://www.catchafire.org/",d:"Skills-based volunteering with nonprofits. A quick way to get climate work on your CV.",s:"connect",t:"Volunteering",r:"Global",f:1,nw:1,v:1},
+ // APPLY
+ {n:"Climatebase",u:"https://climatebase.org/",d:"The largest climate job board. Filter by sector and country.",s:"apply",t:"Job board",r:"Global",f:1,p:1},
+ {n:"EuroClimateJobs",u:"https://www.euroclimatejobs.com/",d:"Climate roles across Europe, including policy and associations.",s:"apply",t:"Job board",r:"Europe",f:1,p:1},
+ {n:"inClimate jobs",u:"https://www.inclimate.com/",d:"8,000+ climate jobs a month, Europe-focused.",s:"apply",t:"Job board",r:"Europe",f:1,p:1},
+ {n:"Samaipata portfolio jobs",u:"https://samaipata.getro.com/jobs",d:"Madrid-founded VC. 100+ open roles across European portfolio companies.",s:"apply",t:"Investor board",r:"Europe",f:1,p:1},
+ {n:"Breakthrough Energy portfolio jobs",u:"https://bevjobs.breakthroughenergy.org/jobs",d:"1,600+ roles across Breakthrough Energy Ventures companies.",s:"apply",t:"Investor board",r:"Global",f:1,p:1},
+ {n:"CTVC job board",u:"https://ctvc.kardow.com/",d:"Climate tech roles from the CTVC newsletter team (new address).",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Terra.do jobs",u:"https://terra.do/climate-jobs/",d:"Very large climate job board linked to the Terra community.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Climate Draft job board",u:"https://jobs.climatedraft.org/jobs",d:"5,000+ climate roles.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"ClimateTechList",u:"https://www.climatetechlist.com/",d:"Thousands of daily openings from climate tech employers.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Green Jobs Board",u:"https://greenjobs.greenjobsearch.org/",d:"Environmental, conservation and climate roles, updated daily.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Trellis jobs (formerly GreenBiz)",u:"https://jobs.trellis.net/",d:"Corporate sustainability roles.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Climate People jobs",u:"https://www.climatepeople.com/jobs",d:"Recruiter-curated climate roles.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Ed's Clean Energy and Sustainability Jobs List",u:"https://edscleanenergysustainabilityjobs.com/",d:"Weekly hand-curated email list of roles.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"80,000 Hours job board",u:"https://jobs.80000hours.org/",d:"High-impact roles, including climate policy and research.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Devex",u:"https://www.devex.com/jobs",d:"International development roles: UN, development banks, NGOs.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"EDF Green Jobs Hub",u:"https://www.edf.org/degrees/green-jobs-hub",d:"A directory of green job boards and networks.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Reconsidered Impact Jobs Hub",u:"https://www.reconsidered.co/jobs",d:"Impact and sustainability roles.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Women in Cleantech and Sustainability jobs",u:"https://www.womenincleantechsustainability.org/job-board/",d:"Curated job board.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Climate Designers job board",u:"https://climatebase.org/board/climatedesigners",d:"Design and UX roles in climate.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"Brown Girl Green jobs",u:"https://www.browngirlgreen.com/greenjobs",d:"Green jobs from a UK diversity-in-sustainability platform.",s:"apply",t:"Job board",r:"Europe",f:1,v:1},
+ {n:"Sustainable Ventures jobs",u:"https://jobs.sustainableventures.co.uk/",d:"London climate startup ecosystem.",s:"apply",t:"Job board",r:"Europe",f:1},
+ {n:"Electric Energy Online jobs",u:"https://electricenergyonline.com/jobs/energy",d:"Power sector roles (new address).",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"The Guardian: environment jobs",u:"https://jobs.theguardian.com/jobs/environment/",d:"Mostly UK roles.",s:"apply",t:"Job board",r:"Europe",f:1},
+ {n:"PCDN: job sites for social impact",u:"https://pcdn.global/learn/resources/",d:"A list of job sites across social change and impact.",s:"apply",t:"Job board",r:"Global",f:1},
+ {n:"LinkedIn Jobs: sostenibilidad en España",u:"https://es.linkedin.com/jobs/sostenibilidad-empleos",d:"Start here, then add your subsector keywords and set an alert.",s:"apply",t:"Job board",r:"Spain",f:1,g:"spain",p:1,nw:1},
+ {n:"InfoJobs",u:"https://www.infojobs.net/",d:"Spain's biggest job site. Search with the Spanish keywords above.",s:"apply",t:"Job board",r:"Spain",f:1,g:"spain",nw:1},
+ {n:"Michael Page: sostenibilidad",u:"https://www.michaelpage.es/jobs/sostenibilidad",d:"Recruiter roles in sustainability across Spain.",s:"apply",t:"Job board",r:"Spain",f:1,g:"spain",nw:1},
+ {n:"Manpower: green jobs",u:"https://www.manpower.es/es/candidatos/green-jobs",d:"Green job listings in Spain.",s:"apply",t:"Job board",r:"Spain",f:1,g:"spain",nw:1},
+ {n:"EU Blue Book traineeship",u:"https://traineeships.ec.europa.eu/",d:"Paid European Commission traineeship. Opens twice a year, mainly for EU nationals.",s:"apply",t:"Job board",r:"Europe",f:1,g:"spain",p:1,nw:1},
+ {n:"EU Careers (EPSO)",u:"https://eu-careers.europa.eu/",d:"Permanent and contract roles in the EU institutions.",s:"apply",t:"Job board",r:"Europe",f:1,g:"spain",nw:1},
+ {n:"EURES",u:"https://eures.europa.eu/",d:"The EU's job mobility portal. Filter by country and sector.",s:"apply",t:"Job board",r:"Europe",f:1,g:"spain",nw:1},
+ {n:"EuroBrussels: environment jobs",u:"https://www.eurobrussels.com/jobs/environment",d:"EU affairs, policy and association roles, mostly in Brussels.",s:"apply",t:"Job board",r:"Europe",f:1,g:"spain",nw:1},
+ {n:"EIT InnoEnergy",u:"https://www.innoenergy.com/",d:"EU-backed energy innovation body with offices in Madrid and Barcelona. Check its careers page and portfolio.",s:"apply",t:"Job board",r:"Spain",f:1,g:"spain",nw:1,v:1},
+ {n:"Fundación Biodiversidad",u:"https://fundacion-biodiversidad.es/",d:"Spanish government foundation behind the Empleaverde green jobs programme.",s:"apply",t:"Job board",r:"Spain",f:1,g:"spain",nw:1,v:1},
+ {n:"MCJ portfolio jobs",u:"https://jobs.mcj.vc/jobs",d:"1,000+ roles at My Climate Journey portfolio companies.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Energy Impact Partners jobs",u:"https://jobs.energyimpactpartners.com/jobs",d:"1,300+ roles in energy transition companies.",s:"apply",t:"Investor board",r:"Global",f:1},
+ {n:"Congruent Ventures jobs",u:"https://jobs.congruentvc.com/jobs",d:"400+ roles at early-stage climate companies.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Energize Ventures jobs",u:"https://jobs.energize.vc/jobs",d:"Energy and industrial software portfolio.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Lowercarbon Capital",u:"https://lowercarbon.com/get-off-the-couch/",d:"Portfolio jobs from Chris Sacca's climate fund.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Prelude Ventures jobs",u:"https://jobs.preludeventures.com/companies",d:"Climate tech portfolio.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Third Sphere jobs",u:"https://jobs.thirdsphere.com/companies",d:"Climate tech portfolio.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Valo Ventures jobs",u:"https://valoventures.getro.com/jobs",d:"Climate portfolio.",s:"apply",t:"Investor board",r:"Global",f:1},
+ {n:"Powerhouse Ventures jobs",u:"https://careers.powerhouse.fund/companies",d:"Climate software portfolio, female-led fund.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Evergreen Climate Innovations",u:"https://evergreeninno.org/careers",d:"Midwest US climate accelerator and fund.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Elemental Impact jobs",u:"https://jobs.elementalexcelerator.com/jobs",d:"Accelerator portfolio.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Greentown Labs careers",u:"https://greentownlabs.com/careers/",d:"Climate incubator in Boston and Houston.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Union Square Ventures: climate jobs",u:"https://jobs.usv.com/jobs?markets=Climate",d:"USV portfolio, filtered to climate.",s:"apply",t:"Investor board",r:"US",f:1},
+ {n:"Sequoia: renewables and environment",u:"https://jobs.sequoiacap.com/companies?industries=Renewables+%26+Environment",d:"Sequoia portfolio, filtered.",s:"apply",t:"Investor board",r:"Global",f:1},
+ {n:"Kleiner Perkins: renewables and environment",u:"https://jobs.kleinerperkins.com/companies?industries=Renewables+%26+Environment",d:"Kleiner portfolio, filtered.",s:"apply",t:"Investor board",r:"US",f:1},
+ // TOOLS
+ {n:"Teal",u:"https://www.tealhq.com/",d:"Job and company tracker with a LinkedIn extension and CV keyword matching. Freemium.",s:"tools",t:"AI tool",r:"Global",f:1,p:1},
+ {n:"Cultivated Culture",u:"https://cultivatedculture.com/",d:"Free tools to match your CV to a job description and find people to contact.",s:"tools",t:"AI tool",r:"Global",f:1,p:1},
+ {n:"Claude, ChatGPT or Gemini",u:"https://claude.ai/",d:"Set up a project with your CV and target roles so every chat starts with your context. Use the prompt library above.",s:"tools",t:"AI tool",r:"Global",f:1,p:1},
+ {n:"Jobscan",u:"https://www.jobscan.co/",d:"Checks how well your CV matches a job description for applicant tracking systems.",s:"tools",t:"AI tool",r:"Global",f:0,nw:1},
+ {n:"Job Test Prep",u:"https://www.jobtestprep.com/",d:"Practice for the online and gamified assessments big employers use.",s:"tools",t:"AI tool",r:"Global",f:0,nw:1},
+ {n:"CaseCoach",u:"https://www.casecoach.com/",d:"Case interview practice. IE students get access through Talent & Careers.",s:"tools",t:"AI tool",r:"Global",f:0,ed:"ie"},
+ {n:"CaseCoach",u:"https://www.casecoach.com/",d:"Case interview practice for consulting applications.",s:"tools",t:"AI tool",r:"Global",f:0,ed:"open"},
+ {n:"Leland",u:"https://www.joinleland.com/",d:"Mock interviews with coaches. Ask Talent & Careers about IE-funded sessions.",s:"tools",t:"AI tool",r:"Global",f:0,ed:"ie"}
+];
+const R = R0.filter(r=>!r.ed||r.ed===EDITION);
+const STEPS = {map:"Map",learn:"Learn",connect:"Connect",apply:"Apply",tools:"AI tools"};
+
+/* ---------- helpers ---------- */
+const $ = (s,el=document)=>el.querySelector(s);
+const $$ = (s,el=document)=>Array.from(el.querySelectorAll(s));
+function h(tag,attrs={},...kids){const e=document.createElement(tag);for(const[k,v]of Object.entries(attrs)){if(v==null||v===false)continue;if(k==="class")e.className=v;else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v===true?"":v)}for(const k of kids.flat()){if(k==null)continue;e.append(k.nodeType?k:document.createTextNode(String(k)))}return e}
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+function card(r){
+  return h("div",{class:"res"},
+    h("a",{class:"name",href:r.u,target:"_blank",rel:"noopener"},r.n),
+    h("span",{class:"tag"},r.r),
+    h("p",{class:"why"},r.d),
+    h("div",{class:"tags"},
+      h("span",{class:"tag"},r.t),
+      h("span",{class:"tag"},r.f?"Free":"Paid"),
+      r.p?h("span",{class:"tag pick"},"★ Arjun's pick"):null,
+      r.nw?h("span",{class:"tag new"},"New"):null,
+      r.v?h("span",{class:"tag verify"},"check"):null));
+}
+
+/* ---------- stage picks ---------- */
+$$("[data-picks]").forEach(box=>{const s=box.dataset.picks;R.filter(r=>r.s===s&&r.p&&!r.g).forEach(r=>box.append(card(r)))});
+$$("[data-group]").forEach(box=>{const g=box.dataset.group;R.filter(r=>r.g===g).sort((a,b)=>(b.p||0)-(a.p||0)).slice(0,6).forEach(r=>box.append(card(r)))});
+$$("[data-see]").forEach(b=>{
+  const s=b.dataset.see,n=R.filter(r=>r.s===s).length;
+  b.textContent="See all "+n+" "+STEPS[s].toLowerCase()+" resources in the library →";
+  b.addEventListener("click",()=>{setStep(s);$("#library").scrollIntoView()});
+});
+
+/* ---------- library ---------- */
+let step="all";
+const segs=$("#segs");
+[["all","All"],...Object.entries(STEPS)].forEach(([k,l])=>segs.append(h("button",{class:"seg","aria-pressed":k==="all"?"true":"false","data-k":k,type:"button",onclick:()=>setStep(k)},l)));
+function fillSelect(sel,label,vals){sel.append(h("option",{value:""},label));vals.forEach(v=>sel.append(h("option",{value:v},v)))}
+fillSelect($("#ftype"),"All types",[...new Set(R.map(r=>r.t))].sort());
+fillSelect($("#freg"),"All regions",["Global","Europe","Spain","Madrid","US"]);
+function setStep(k){step=k;$$(".seg",segs).forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k?"true":"false"));renderLib()}
+function renderLib(){
+  const q=$("#q").value.trim().toLowerCase(),t=$("#ftype").value,rg=$("#freg").value,fr=$("#ffree").checked,pk=$("#fpick").checked,nw=$("#fnew").checked;
+  const regOk=r=>!rg||r.r===rg||(rg==="Spain"&&r.r==="Madrid")||(rg==="Europe"&&(r.r==="Spain"||r.r==="Madrid"));
+  const list=R.filter(r=>(step==="all"||r.s===step)&&(!t||r.t===t)&&regOk(r)&&(!fr||r.f)&&(!pk||r.p)&&(!nw||r.nw)&&(!q||(r.n+" "+r.d+" "+r.t+" "+r.r).toLowerCase().includes(q))).sort((a,b)=>(b.p||0)-(a.p||0));
+  const lib=$("#lib");lib.replaceChildren(...list.map(card));
+  if(!list.length)lib.append(h("p",{class:"count"},"Nothing matches. Try clearing a filter."));
+  $("#count").textContent=list.length+" of "+R.length;
+}
+["#q","#ftype","#freg","#ffree","#fpick","#fnew"].forEach(s=>$(s).addEventListener("input",renderLib));
+renderLib();
+$("#aitools").append(...R.filter(r=>r.s==="tools").map(card));
+
+/* ---------- sector mapper ---------- */
+const ROLE=(a,b)=>({a,b});
+const M=[
+ {k:"Energy",c:"--c-energy",sub:[
+   {k:"Solar",n:[
+     {k:"Rooftop solar",r:[ROLE("System design","Sizing and designing installations"),ROLE("Customer acquisition and sales","Marketing to homes and businesses"),ROLE("Installation (EPC)","Engineering, procurement and construction"),ROLE("Operations and maintenance","Keeping systems performing"),ROLE("Financing","Leases, loans and power purchase agreements"),ROLE("Software","Design tools, monitoring, grid balancing")]},
+     {k:"Utility-scale solar",r:[ROLE("Project development","Land, permits, grid connection"),ROLE("Project finance","Raising and structuring capital"),ROLE("EPC","Building the plant"),ROLE("Asset management","Running the portfolio"),ROLE("Risk analytics software","Assessing project risk for developers")]},
+     {k:"Off-grid and mini-grid",r:[ROLE("Pay-as-you-go products","Solar home systems in emerging markets"),ROLE("Mini-grid operators","Village-scale power"),ROLE("Productive use","Solar cooling, drying, irrigation"),ROLE("Impact finance","Funds and development banks")]}]},
+   {k:"Energy storage",n:[
+     {k:"Grid-scale batteries",r:[ROLE("Project development","Siting and grid services"),ROLE("Trading and optimisation","Software that decides when to charge"),ROLE("Manufacturing","Cells, packs and systems")]},
+     {k:"Battery recycling",r:[ROLE("Collection and logistics","Getting batteries back"),ROLE("Materials recovery","Lithium, nickel, cobalt"),ROLE("Second-life","Reusing EV batteries")]}]},
+   {k:"Hydrogen",n:[
+     {k:"Green hydrogen",r:[ROLE("Electrolyser manufacturing","Equipment makers"),ROLE("Project development","Production plants"),ROLE("Offtake and distribution","Industrial buyers, transport"),ROLE("Policy and market analysis","Subsidies and timing")]}]},
+   {k:"Wind",n:[
+     {k:"Offshore wind",r:[ROLE("Development","Seabed leasing and permits"),ROLE("Supply chain","Turbines, cables, ports"),ROLE("Stakeholder and ESG","Fisheries, communities, biodiversity")]}]}]},
+ {k:"Land and food",c:"--c-land",sub:[
+   {k:"Food systems",n:[
+     {k:"Food waste",r:[ROLE("Surplus redistribution","Apps and marketplaces for unsold food"),ROLE("Retail and FMCG programmes","In-house waste reduction"),ROLE("Upcycled ingredients","New products from by-products")]},
+     {k:"Alternative proteins",r:[ROLE("Product and R&D","Plant-based, fermentation"),ROLE("Commercial","Retail and food-service partnerships"),ROLE("Regulatory","Approvals and labelling")]}]},
+   {k:"Agriculture",n:[
+     {k:"Regenerative agriculture",r:[ROLE("Farmer programmes","Supply-chain sourcing for big brands"),ROLE("Soil carbon MRV","Measuring and verifying impact"),ROLE("Agri-finance","Transition loans and insurance")]}]},
+   {k:"Nature-based solutions",n:[
+     {k:"Forest carbon",r:[ROLE("Project development","Restoration and protection projects"),ROLE("MRV and remote sensing","Satellite monitoring"),ROLE("Registries and ratings","Quality assurance for credits"),ROLE("Corporate buyers","Credit procurement strategy")]},
+     {k:"Biodiversity and nature reporting",r:[ROLE("Nature risk analysis","TNFD-aligned assessments"),ROLE("Biodiversity credits","Emerging markets for nature"),ROLE("Restoration projects","On-the-ground NGOs and developers")]}]}]},
+ {k:"Water and oceans",c:"--c-water",sub:[
+   {k:"Ocean and coastal",n:[
+     {k:"Blue carbon",r:[ROLE("Mangrove and seagrass restoration","Project developers and NGOs"),ROLE("Seaweed farming","Food, materials, carbon"),ROLE("Marine conservation","Protected areas, monitoring")]}]},
+   {k:"Water management",n:[
+     {k:"Water efficiency",r:[ROLE("Smart metering and leak detection","Utility software"),ROLE("Industrial water reuse","Treatment for factories"),ROLE("Water risk analysis","For investors and corporates")]}]}]},
+ {k:"Waste and materials",c:"--c-waste",sub:[
+   {k:"Circular electronics",n:[
+     {k:"E-waste",r:[ROLE("Collection and reverse logistics","Getting devices back"),ROLE("Recycling and materials recovery","Precious and critical metals"),ROLE("Refurbishment and resale","Second-hand devices"),ROLE("Digital product passports","Traceability under EU rules"),ROLE("Recycler software","Digitising recycling operations")]}]},
+   {k:"Packaging",n:[
+     {k:"Reuse and refill",r:[ROLE("Reuse systems","Returnable packaging for retail"),ROLE("Compostable materials","Bio-based alternatives"),ROLE("EPR compliance","Producer responsibility rules")]}]},
+   {k:"Fashion and textiles",n:[
+     {k:"Textile circularity",r:[ROLE("Resale and rental","Circular business models"),ROLE("Fibre-to-fibre recycling","Recycled materials"),ROLE("Supply-chain traceability","Sourcing data")]}]}]},
+ {k:"Mobility",c:"--c-mobility",sub:[
+   {k:"Electric vehicles",n:[
+     {k:"EV charging",r:[ROLE("Charge point operators","Running networks"),ROLE("Fleet electrification","Helping companies switch"),ROLE("Charging software","Billing, load management")]}]},
+   {k:"Shared and active mobility",n:[
+     {k:"Micromobility",r:[ROLE("Operations","City-level fleets"),ROLE("Public partnerships","Working with city governments")]}]}]},
+ {k:"Buildings",c:"--c-buildings",sub:[
+   {k:"Energy efficiency",n:[
+     {k:"Building retrofits",r:[ROLE("Energy audits","Assessing buildings"),ROLE("Heat pumps and HVAC","Installation and sales"),ROLE("Retrofit finance","Green mortgages, energy service contracts")]}]},
+   {k:"Low-carbon construction",n:[
+     {k:"Green materials",r:[ROLE("Low-carbon cement and steel","Material innovation"),ROLE("Embodied carbon software","Lifecycle assessment tools")]}]}]},
+ {k:"Finance and reporting",c:"--c-finance",sub:[
+   {k:"Sustainable finance",n:[
+     {k:"ESG and impact investing",r:[ROLE("ESG analyst","Rating companies and portfolios"),ROLE("Impact investing","Funds with impact targets"),ROLE("Green bonds","Structuring and verification"),ROLE("Climate risk","Physical and transition risk modelling")]},
+     {k:"Development finance",r:[ROLE("Multilateral banks","World Bank, IFC, EIB, ADB, EBRD"),ROLE("Blended finance","Mixing public and private capital")]}]},
+   {k:"Corporate reporting",n:[
+     {k:"CSRD and ESRS reporting",r:[ROLE("In-house reporting","Sustainability report owners"),ROLE("Advisory","Consultancies, large and boutique"),ROLE("Assurance","Auditing sustainability data"),ROLE("Reporting software","ESG data platforms")]},
+     {k:"Carbon accounting",r:[ROLE("Scope 1, 2 and 3 measurement","In-house or advisory"),ROLE("Decarbonisation strategy","Science-based targets"),ROLE("Carbon accounting software","Measurement platforms")]}]}]}
+];
+let sel=[0,0,0];
+let mine=store.get("cck-mymap",[]);
+function col(level,items,onPick,active,color){
+  const c=h("div",{class:"mcol"},h("div",{class:"lvl"},level));
+  if(!items){c.append(h("p",{class:"empty"},"Pick from the left"));return c}
+  items.forEach((it,i)=>c.append(h("button",{class:"node"+(active===i?" on":""),type:"button",onclick:()=>onPick(i)},h("span",{class:"dot",style:"background:var("+(it.c||color)+")"}),it.k,h("span",{class:"chev","aria-hidden":"true"},"›"))));
+  return c;
+}
+function renderMap(){
+  const [a,b,c]=sel,S=a!=null?M[a]:null,U=S&&b!=null?S.sub[b]:null,N=U&&c!=null?U.n[c]:null,color=S?S.c:null;
+  const cols=$("#mcols");cols.replaceChildren(
+    col("Sector",M,i=>{sel=[i,null,null];renderMap()},a),
+    col("Subsector",S&&S.sub,i=>{sel=[a,i,null];renderMap()},b,color),
+    col("Niche",U&&U.n,i=>{sel=[a,b,i];renderMap()},c,color));
+  const last=h("div",{class:"mcol"},h("div",{class:"lvl"},"Where in the value chain"));
+  if(!N)last.append(h("p",{class:"empty"},"Each niche has several kinds of company. Pick the part you'd want to work in."));
+  else{
+    const label=U.k+" › "+N.k,has=mine.includes(label);
+    last.append(h("div",{class:"roles"},N.r.map(r=>h("div",{class:"role"},h("b",{},r.a),h("span",{},r.b)))));
+    last.append(h("button",{class:"addmap",type:"button",disabled:has||mine.length>=7,onclick:()=>{mine.push(label);store.set("cck-mymap",mine);renderMine();renderMap()}},has?"Saved":"Save to my shortlist"));
+    last.append(h("p",{class:"empty",style:"padding:6px 2px 0"},"Next: list 15–20 companies doing this in your target countries. The AI Lab can help."));
+  }
+  cols.append(last);
+  const cr=$("#crumbs");cr.replaceChildren();
+  const parts=[S&&S.k,U&&U.k,N&&N.k].filter(Boolean);
+  if(!parts.length)cr.append(h("b",{},"Start with a sector"));
+  else parts.forEach((p,i)=>{cr.append(i===parts.length-1?h("b",{},p):p);if(i<parts.length-1)cr.append(" › ")});
+}
+function renderMine(){
+  const box=$("#mychips");
+  if(!mine.length)box.replaceChildren(h("span",{class:"count"},"Nothing saved yet. Drill down to a niche and press \"Save to my shortlist\"."));
+  else box.replaceChildren(...mine.map((m,i)=>h("span",{class:"chip"},m,h("button",{type:"button","aria-label":"Remove "+m,onclick:()=>{mine.splice(i,1);store.set("cck-mymap",mine);renderMine();renderMap()}},"×"))));
+  $("#meter").replaceChildren(h("b",{},String(mine.length))," of 5–7 subsectors");
+}
+renderMap();renderMine();
+
+/* ---------- AI lab: everything opens in the visitor's own Claude or ChatGPT ---------- */
+const WHO = EDITION==="ie"
+  ? "I'm a student on IE University's Master in Sustainability and Business Transformation (MSBT) in Madrid."
+  : "I'm moving into a climate or sustainability career.";
+const METHOD = "Use this method from my career advisor: map sectors with Project Drawdown from broad bucket to subsector, niche and value-chain role (e.g. energy > solar > rooftop solar > financing), ending with 5-7 subsectors; list 15-20 target companies per subsector; use job descriptions to find skill gaps; network through climate communities (Terra.do, Work on Climate, inClimate) and meetups like Climate Coffee; graduate and UN programmes open Oct-Dec; expect ~100 applications and favour referrals over Easy Apply.";
+const RULES = "Plain language, direct, no hype. Never invent facts about specific companies; tell me what to verify.";
+const MAXQ = 1900;
+
+const PARTNERS=[
+ {g:"Explore",t:"Career path coach",d:"Questions you until your direction is clearer.",
+  p:`${WHO} Be my career path coach. ${METHOD}
+
+Coach me Socratically: ask ONE question at a time, keep replies short, and don't give long lists until you understand my background, strengths, interests, target countries and constraints (visa, money, timing). Challenge vague answers. Every few turns, summarise what you've learned and suggest one concrete next step. ${RULES}
+
+Start by asking what I did before and what I enjoyed most about it.`},
+ {g:"Explore",t:"Sector drill-down",d:"Takes one broad interest all the way down to companies.",
+  p:`${WHO} Help me drill one broad climate interest down to a specific niche. ${METHOD}
+
+Work level by level: offer 3-5 subsectors and let me choose, then 3-5 niches, then the parts of the value chain (e.g. rooftop solar: design, sales, installation/EPC, maintenance, financing, software). At each level ask which fits and why. At the end, suggest example companies in my target countries and remind me to verify each. ${RULES}
+
+Start by asking for my broad interest and target countries.`},
+ {g:"Apply",t:"CV and job match",d:"Gap check between your CV and a job description.",
+  p:`${WHO} Compare my CV with a job description I'm targeting. ${METHOD}
+
+Once you have both: (1) list the 6-8 requirements that matter most; (2) mark each match / partial / missing with evidence from my CV; (3) list keywords from the job description missing from my CV; (4) rewrite 3 CV bullets using only facts I gave you, asking me for numbers rather than inventing them; (5) one line on whether to apply now or close gaps first. ${RULES}
+
+Start by asking me to paste the job description, then my CV.`},
+ {g:"Apply",t:"Story coach",d:"Builds your 'why climate, why me' narrative.",
+  p:`${WHO} Help me build a credible career-change story: a 60-second "tell me about yourself", plus short answers to "why climate?" and "why this company?". ${METHOD}
+
+Ask ONE question at a time to find a concrete turning point, my transferable skills and evidence of commitment (courses, projects, communities). After 4-6 exchanges, draft the 60-second version in a natural spoken voice, then ask what feels off and revise. Push back on clichés like "I've always been passionate about the planet". ${RULES}
+
+Start by asking what I did before and what first made me want to work on climate.`},
+ {g:"Apply",t:"Outreach coach",d:"Drafts and sharpens networking messages.",
+  p:`${WHO} Help me write networking messages for my climate job search: LinkedIn notes (under 300 characters), community intro posts, messages to people who posted a job, follow-ups and thank-yous. ${METHOD}
+
+First find out who I'm writing to and the one thing I want from them. Keep drafts short, specific and human, with one small ask (usually a 15-minute call). If I paste my own draft, critique it briefly and offer a tighter version. ${RULES}
+
+Start by asking who I want to reach and why.`},
+ {g:"Interview and decide",t:"Mock interviewer",d:"Practise for a specific role, with feedback.",
+  p:`${WHO} Run a mock interview with me as the hiring manager for a climate or sustainability role. ${METHOD}
+
+Ask ONE question at a time, mixing motivation, competency (STAR) and at least one question on the subsector's current market challenges. After each answer give brief feedback (what worked, what to add, a stronger outline), then the next question. After 6 questions give an overall assessment and my top three improvements. Realistic but encouraging. ${RULES}
+
+Start by asking for the job description (or company and role) and a few lines about my background.`},
+ {g:"Interview and decide",t:"Decision coach",d:"Weighs offers, internships or next steps.",
+  p:`${WHO} Help me think through a career decision (competing offers, internship versus full-time, which country to target). ${METHOD}
+
+First ask what matters most to me now and my hard constraints (visa, money, timing, family). Then compare the options on: what I'd learn, who I'd work with, where each leads in 18-24 months, money and visa implications, and risk. Suggest how to buy time politely if offers clash, and the questions to ask each employer. Don't decide for me; end with what would tip the balance. ${RULES}
+
+Start by asking me to describe the options and any deadline.`}
+];
+
+const PROMPTS=[
+ {w:"Step 1 · Map",t:"Build a company long-list",d:"15-20 companies per niche to start tracking.",
+  p:`${WHO} Help me build a long-list of 15-20 companies in one climate niche in my target countries. Mix large corporates, scale-ups (Series A or later) and smaller specialists. For each: name, country, what they do in one line, approximate size or funding stage, and whether they run a graduate programme if you know. Mark anything you're unsure about; I'll verify every company. ${RULES}
+
+Start by asking for the niche and the countries.`},
+ {w:"Step 2 · Learn",t:"Find my skill gaps",d:"Compares several job descriptions with your CV.",
+  p:`${WHO} Help me find my skill gaps. I'll paste 3-5 job descriptions I'm targeting, then my CV. Then: (1) list the skills, tools and certifications that appear in at least two job descriptions; (2) make a table: requirement | have it / partly / missing | evidence from my CV; (3) for each gap, suggest how to close it in the next 6-9 months (a course, project, volunteering or side work). ${RULES}
+
+Start by asking me to paste the job descriptions.`},
+ {w:"Step 3 · Connect",t:"Write my community intro",d:"Background, target role, one specific ask.",
+  p:`${WHO} Write a short introduction post for a climate Slack or WhatsApp community (under 90 words): who I am and my background, the role and subsector I'm exploring, and one specific ask. Friendly and direct, no buzzwords, no exclamation marks. Give me two versions.
+
+Start by asking about my background, what I'm exploring, and my ask.`},
+ {w:"Step 3 · Connect",t:"Message someone who posted a job",d:"Before you apply, not after.",
+  p:`${WHO} Someone in a climate community posted a job I want. Draft a short direct message to them (under 120 words): why I fit, in two concrete points from my background, and a request for a 15-minute call before I apply. Don't oversell.
+
+Start by asking me to paste the post or job description and a summary of my background.`},
+ {w:"Step 3 · Connect",t:"Prepare an informational interview",d:"Research brief plus good questions.",
+  p:`${WHO} I have a 20-minute informational call coming up. Give me: (1) a 5-line brief on the person's company and subsector (mark what I should verify); (2) 8 thoughtful questions, starting broad and ending with "Who else should I speak to?"; (3) a two-sentence way to introduce myself.
+
+Start by asking who I'm meeting (name, role, company) and what I know about them.`},
+ {w:"Step 4 · Apply",t:"Tailor my CV to a job",d:"Better keywords and bullets, no invented experience.",
+  p:`${WHO} Rewrite my most relevant CV bullets to match a job description and pass applicant tracking systems. Don't invent experience or numbers; ask me for figures where a bullet would be stronger. Lead each bullet with an action and end with a result.
+
+Start by asking me to paste the job description, then my CV.`},
+ {w:"Step 4 · Apply",t:"Critique my cover letter",d:"Shorter, more specific, more convincing.",
+  p:`${WHO} Critique my cover letter as a tough hiring manager in the relevant subsector. Point out long sentences, vague claims and generic phrases. Then suggest edits that use specific examples with measurable outcomes, keep paragraphs short, and present what I say about the company as my own research-based view rather than as fact.
+
+Start by asking me to paste the cover letter and the job description.`},
+ {w:"Step 4 · Apply",t:"Compare two offers",d:"Where does each role lead in 18-24 months?",
+  p:`${WHO} Help me compare two job offers. First ask what matters most to me right now. Then compare: what I'd learn, who I'd work with, where each could realistically lead in 18-24 months, salary and visa implications, and risk. End with the questions I should ask each employer before deciding.
+
+Start by asking me to describe both offers.`}
+];
+
+function withCtx(p,ctx){ctx=(ctx||"").trim();return ctx?p+"\n\nContext from me: "+ctx:p}
+function links(text){
+  const q=encodeURIComponent(text);
+  return {claude:"https://claude.ai/new?q="+q,gpt:"https://chatgpt.com/?q="+q,tooLong:text.length>MAXQ};
+}
+async function copyText(text,btn,fallbackEl){
+  try{await navigator.clipboard.writeText(text);btn.textContent="Copied"}
+  catch(e){if(fallbackEl){fallbackEl.closest("details")&&(fallbackEl.closest("details").open=true);const r=document.createRange();r.selectNodeContents(fallbackEl);const s=getSelection();s.removeAllRanges();s.addRange(r)}btn.textContent="Selected: press Ctrl+C"}
+  setTimeout(()=>btn.textContent="Copy",2200);
+}
+function aiCard(x,{label,ctx}){
+  const pre=h("pre",{},x.p);
+  const det=h("details",{},h("summary",{},"See the full prompt"),pre);
+  const ta=ctx?h("textarea",{rows:"2","aria-label":"Optional context for "+x.t,placeholder:"Optional: e.g. targeting ESG analyst roles in the Netherlands"}):null;
+  const aC=h("a",{class:"btn sm",target:"_blank",rel:"noopener",href:"#"},"Open in Claude");
+  const aG=h("a",{class:"btn sm ghost",target:"_blank",rel:"noopener",href:"#"},"Open in ChatGPT");
+  const cp=h("button",{class:"btn sm ghost",type:"button"},"Copy");
+  const note=h("p",{hidden:true,style:"font-size:.8rem"},"Your context makes this too long for a link. Use Copy and paste it into a new chat.");
+  const refresh=()=>{const text=withCtx(x.p,ta&&ta.value),l=links(text);aC.href=l.claude;aG.href=l.gpt;note.hidden=!l.tooLong;[aC,aG].forEach(a=>a.style.display=l.tooLong?"none":"")};
+  if(ta)ta.addEventListener("input",refresh);
+  cp.addEventListener("click",()=>copyText(withCtx(x.p,ta&&ta.value),cp,pre));
+  refresh();
+  return h("div",{class:"pcard"},label?h("span",{class:"when"},label):null,h("h3",{},x.t),h("p",{},x.d),ta,det,note,h("div",{class:"row"},aC,aG,cp));
+}
+const pBox=$("#partners");let lastG="",grid=null;
+PARTNERS.forEach(x=>{if(x.g!==lastG){pBox.append(h("div",{class:"grp-h"},x.g));grid=h("div",{class:"prompts"});pBox.append(grid);lastG=x.g}grid.append(aiCard(x,{ctx:true}))});
+const qBox=$("#prompts");PROMPTS.forEach(x=>qBox.append(aiCard(x,{label:x.w})));
+
+/* ---------- tabs ---------- */
+$$(".tabs button").forEach(b=>b.addEventListener("click",()=>{
+  $$(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b?"true":"false"));
+  $$("[data-panel]").forEach(p=>p.hidden=p.dataset.panel!==b.dataset.tab);
+}));
+
+/* ---------- suggestion form (Netlify Forms, emailed to Arjun) ---------- */
+$("#sg").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const f=e.target,err=$("#sgerr");err.hidden=true;$("#sgok").hidden=true;$("#sg-btn").disabled=true;
+  try{
+    const res=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(f)).toString()});
+    if(!res.ok)throw new Error(res.status);
+    $("#sgok").hidden=false;f.reset();
+  }catch(x){err.textContent="That didn't go through. Please try again in a minute.";err.hidden=false}
+  finally{$("#sg-btn").disabled=false}
+});
+})();
+</script>
+</body>
+</html>

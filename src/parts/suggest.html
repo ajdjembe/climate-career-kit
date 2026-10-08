@@ -1,0 +1,23 @@
+<!-- SUGGEST -->
+<section class="stage" id="suggest"><div class="wrap">
+  <div class="suggest">
+    <div>
+      <p class="eyebrow">Keep it alive</p>
+      <h2 style="margin-top:6px">Found something useful?</h2>
+      <p class="lede" style="margin-top:14px">Suggest a resource you've used and found helpful. Suggestions come straight to me, I review every one, and new additions carry a "New" tag.</p>
+    </div>
+    <form class="sg" id="sg" name="suggestion" method="POST" action="__THANKS__" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="suggestion">
+      <input type="hidden" name="edition" value="__EDITION__">
+      <p hidden><label>Leave this empty <input name="company"></label></p>
+      <label for="sg-name">Resource name<input id="sg-name" name="resource" required maxlength="120"></label>
+      <label for="sg-url">Link<input id="sg-url" name="link" type="url" placeholder="https://" required maxlength="400"></label>
+      <label for="sg-step">Which step does it help with?<select id="sg-step" name="step"><option>Map</option><option>Learn</option><option>Connect</option><option>Apply</option><option>AI tools</option></select></label>
+      <label for="sg-why">Why is it useful? (one line)<textarea id="sg-why" name="why" rows="2" maxlength="400"></textarea></label>
+      <label for="sg-who">Your name (optional, so I can credit you)<input id="sg-who" name="name" maxlength="80"></label>
+      <button class="btn" type="submit" id="sg-btn">Send suggestion</button>
+      <p class="okmsg" id="sgok" hidden role="status">Thanks. Your suggestion is on its way to me.</p>
+      <p class="errmsg" id="sgerr" hidden role="alert"></p>
+    </form>
+  </div>
+</div></section>
